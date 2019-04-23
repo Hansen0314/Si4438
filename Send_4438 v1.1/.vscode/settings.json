@@ -1,0 +1,11 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "files.associations": {
+        "user_uart.h": "c",
+        "ds1302.h": "c",
+        "stm8s.h": "c",
+        "ht1621.h": "c",
+        "keyborad.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
