@@ -762,34 +762,41 @@ INTERRUPT_HANDLER(TIM4_UPD_OVF_TRG_IRQHandler,25)
       
       //RfRxBuffer[7] = 0xc0;
       KeyFlagBuff = RfRxBuffer[7];
-       LED_ON;
+       
       if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_1))//判断数据正确与否
       {
+		LED_ON;
         KeyFlag = 1;
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_2))//判断数据正确与否
       {
+		 LED_ON;
          KeyFlag = 2;
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_3))//判断数据正确与否
       {
+		LED_ON;
         KeyFlag = 3;
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_4))//判断数据正确与否
       {
+		LED_ON;
         //总开关
         closAll(0); 
         // openRelay(4); 
         KeyFlag = 4;
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_5))//判断数据正确与否
       {
+		LED_ON;
         KeyFlag = 5; 
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_6))//判断数据正确与否
       {         
-        
+        LED_ON;
         KeyFlag = 6;
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_7))//判断数据正确与否
-      {      
+      {  
+		LED_ON;
         KeyFlag = 7;
       }else if((RfRxBuffer[0]==FlashBuf[0])&&(RfRxBuffer[1]==FlashBuf[1])&&(RfRxBuffer[2]==FlashBuf[2])&&(RfRxBuffer[3]==FlashBuf[3])&&(RfRxBuffer[4]==FlashBuf[4])&&(RfRxBuffer[5]==Command_8))//判断数据正确与否
-      {       
+      {     
+		LED_ON;
         KeyFlag = 8;
       }else{
         KeyFlag = 0;
